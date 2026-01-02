@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MEGA MEDIA | Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="MEGA MEDIA Logo">
+        <span>MEGA MEDIA</span>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</header>
+
+<section class="contact">
+    <h1>Contact Us</h1>
+
+    <div class="contact-info">
+        <p><strong>Phone:</strong> +972 59 4714996</p>
+        <p><strong>Email:</strong> info@megamedia.com</p>
+        <p><strong>Location:</strong> Palestine</p>
+    </div>
+
+    <form onsubmit="sendMessage(event)">
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <textarea id="message" placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 MEGA MEDIA. All Rights Reserved.</p>
+</footer>
+
+<button id="scrollTopBtn">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
