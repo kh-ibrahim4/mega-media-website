@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MEGA MEDIA | Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact MEGA MEDIA - Get in touch with us for web design, development, and digital marketing services.">
+    <meta name="keywords" content="contact MEGA MEDIA, web design inquiry, Palestine digital agency">
+    <title>MEGA MEDIA | Contact Us</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="navbar">
     <div class="logo">
-        <img src="images/logo.png" alt="MEGA MEDIA Logo">
+        <img src="images/logo.png" alt="MEGA MEDIA Company Logo">
         <span>MEGA MEDIA</span>
     </div>
     <nav>
@@ -19,8 +22,10 @@
     </nav>
 </header>
 
+<main>
 <section class="contact">
     <h1>Contact Us</h1>
+    <p>Have a question or want to work together? Send us a message!</p>
 
     <div class="contact-info">
         <p><strong>Phone:</strong> +972 59 4714996</p>
@@ -28,20 +33,39 @@
         <p><strong>Location:</strong> Palestine</p>
     </div>
 
-    <form onsubmit="sendMessage(event)">
-        <input type="text" id="name" placeholder="Name">
-        <input type="email" id="email" placeholder="Email">
-        <textarea id="message" placeholder="Message"></textarea>
-        <button type="submit">Send</button>
+    <div id="successMessage" class="success-message">
+        Thank you! Your message has been sent successfully. We'll get back to you soon!
+    </div>
+
+    <form id="contactForm">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" placeholder="Tell us about your project or inquiry" required></textarea>
+
+        <button type="submit">Send Message</button>
     </form>
 </section>
+</main>
 
 <footer>
-    <p>© 2025 MEGA MEDIA. All Rights Reserved.</p>
+    <p>&copy; 2025 MEGA MEDIA. All Rights Reserved.</p>
+    <div class="social-links">
+        <a href="#" aria-label="Visit our Facebook page">Facebook</a>
+        <a href="#" aria-label="Visit our Instagram page">Instagram</a>
+        <a href="#" aria-label="Visit our LinkedIn page">LinkedIn</a>
+    </div>
 </footer>
 
-<button id="scrollTopBtn">↑</button>
-
+<button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 <script src="script.js"></script>
+
 </body>
 </html>

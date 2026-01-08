@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MEGA MEDIA | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MEGA MEDIA - Professional digital media company providing web design, development, and digital marketing services to help businesses grow online.">
+    <meta name="keywords" content="web design, web development, digital marketing, MEGA MEDIA, Palestine">
+    <meta name="author" content="MEGA MEDIA">
+    <title>MEGA MEDIA | Home - Digital Media Solutions</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="navbar">
     <div class="logo">
-        <img src="images/logo.png" alt="MEGA MEDIA Logo">
+        <img src="images/logo.png" alt="MEGA MEDIA Company Logo">
         <span>MEGA MEDIA</span>
     </div>
     <nav>
@@ -19,6 +23,7 @@
     </nav>
 </header>
 
+<main>
 <section class="hero">
     <div class="hero-text">
         <h1>Welcome to MEGA MEDIA</h1>
@@ -27,15 +32,16 @@
             solutions in web design, development, and digital marketing
             to help businesses grow online.
         </p>
+        <button onclick="window.location.href='services.html'">View Our Services</button>
     </div>
     <div class="hero-image">
-        <img src="images/hero-media.png" alt="Digital Media">
+        <img src="images/hero-media.png" alt="Digital Media and Technology Illustration">
     </div>
 </section>
 
 <section class="about">
     <div class="about-image">
-        <img src="images/about-us.jpg" alt="About Us">
+        <img src="images/about-us.jpg" alt="MEGA MEDIA Team at Work">
     </div>
     <div class="about-text">
         <h2>About Us</h2>
@@ -44,14 +50,21 @@
             modern, high-quality digital solutions. Our mission is
             to support businesses through innovative technologies.
         </p>
+        <button onclick="window.location.href='contact.html'">Contact Us</button>
     </div>
 </section>
+</main>
 
 <footer>
-    <p>© 2025 MEGA MEDIA. All Rights Reserved.</p>
+    <p>&copy; 2025 MEGA MEDIA. All Rights Reserved.</p>
+    <div class="social-links">
+        <a href="#" aria-label="Visit our Facebook page">Facebook</a>
+        <a href="#" aria-label="Visit our Instagram page">Instagram</a>
+        <a href="#" aria-label="Visit our LinkedIn page">LinkedIn</a>
+    </div>
 </footer>
 
-<button id="scrollTopBtn">↑</button>
+<button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 
 <script src="script.js"></script>
 </body>

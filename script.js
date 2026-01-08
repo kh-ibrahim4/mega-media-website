@@ -1,32 +1,85 @@
-function sendMessage(event) {
-    event.preventDefault();
+javascript
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.getElementById("scrollTopBtn");
 
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill in all fields.");
-        return;
+    if (scrollBtn) {
+       
+        window.addEventListener("scroll", function () {
+            if (document.documentElement.scrollTop > 200) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        });
+
+        scrollBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
     }
 
-    alert("Thank you " + name + ", your message has been sent.");
-}
+   
+    const contactForm = document.getElementById("contactForm");
+    const successMessage = document.getElementById("successMessage");
 
-function showDetails() {
-    alert("More details will be available soon.");
-}
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
 
-const scrollBtn = document.getElementById("scrollTopBtn");
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
 
-window.onscroll = function () {
-    if (document.documentElement.scrollTop > 200) {
-        scrollBtn.style.display = "block";
-    } else {
-        scrollBtn.style.display = "none";
+            
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            if (successMessage) {
+                successMessage.classList.add("show");
+                
+                
+                setTimeout(function() {
+                    successMessage.classList.remove("show");
+                }, 5000);
+            }
+
+           
+            contactForm.reset();
+
+         
+            console.log("Form submitted:", {
+                name: name,
+                email: email,
+                message: message
+            });
+        });
     }
-};
 
-scrollBtn.onclick = function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-};
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+        link.addEventListener("click", function(e) {
+            const href = this.getAttribute("href");
+            if (href !== "#") {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }
+            }
+        });
+    });
+});

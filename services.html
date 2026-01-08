@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MEGA MEDIA | Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MEGA MEDIA Services - Professional web design, web development, and digital marketing solutions for your business.">
+    <meta name="keywords" content="web design services, web development, digital marketing, Palestine">
+    <title>MEGA MEDIA | Services - Our Digital Solutions</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="navbar">
     <div class="logo">
-        <img src="images/logo.png" alt="MEGA MEDIA Logo">
+        <img src="images/logo.png" alt="MEGA MEDIA Company Logo">
         <span>MEGA MEDIA</span>
     </div>
     <nav>
@@ -19,41 +22,49 @@
     </nav>
 </header>
 
+<main>
 <section class="services">
     <h1>Our Services</h1>
+    <p style="max-width: 700px; margin: 0 auto 40px; color: #666;">
+        We offer comprehensive digital solutions to help your business succeed in the digital world.
+    </p>
 
     <div class="services-grid">
-
         <div class="service-card">
-            <img src="images/web-design.jpg" alt="Web Design">
+            <img src="images/web-design.jpg" alt="Web Design Services Icon">
             <h3>Web Design</h3>
-            <p>Modern and user-friendly website designs.</p>
-            <button onclick="showDetails()">Read More</button>
+            <p>Modern and user-friendly website designs tailored to your brand identity and business goals.</p>
+            <button onclick="window.location.href='contact.html'">Get Started</button>
         </div>
 
         <div class="service-card">
-            <img src="images/web-development.jpg" alt="Web Development">
+            <img src="images/web-development.jpg" alt="Web Development Services Icon">
             <h3>Web Development</h3>
-            <p>Responsive and high-performance websites.</p>
-            <button onclick="showDetails()">Read More</button>
+            <p>Responsive and high-performance websites built with the latest technologies and best practices.</p>
+            <button onclick="window.location.href='contact.html'">Get Started</button>
         </div>
 
         <div class="service-card">
-            <img src="images/digital-marketing.jpg" alt="Digital Marketing">
+            <img src="images/digital-marketing.jpg" alt="Digital Marketing Services Icon">
             <h3>Digital Marketing</h3>
-            <p>Effective marketing strategies for growth.</p>
-            <button onclick="showDetails()">Read More</button>
+            <p>Effective marketing strategies to increase your online presence and drive business growth.</p>
+            <button onclick="window.location.href='contact.html'">Get Started</button>
         </div>
-
     </div>
 </section>
+</main>
 
 <footer>
-    <p>© 2025 MEGA MEDIA. All Rights Reserved.</p>
+    <p>&copy; 2025 MEGA MEDIA. All Rights Reserved.</p>
+    <div class="social-links">
+        <a href="#" aria-label="Visit our Facebook page">Facebook</a>
+        <a href="#" aria-label="Visit our Instagram page">Instagram</a>
+        <a href="#" aria-label="Visit our LinkedIn page">LinkedIn</a>
+    </div>
 </footer>
 
-<button id="scrollTopBtn">↑</button>
-
+<button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 <script src="script.js"></script>
+
 </body>
 </html>
